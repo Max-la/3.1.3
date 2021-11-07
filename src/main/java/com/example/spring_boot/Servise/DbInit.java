@@ -4,11 +4,15 @@ import com.example.spring_boot.Model.Role;
 import com.example.spring_boot.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.annotation.PostConstruct;
 import java.util.HashSet;
 
-@Component
+@Configuration
+@Transactional
 public class DbInit{
 
 	public final UserService userService;

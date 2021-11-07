@@ -36,8 +36,8 @@ public class UserController {
     @GetMapping(value = "/user")
     public String getUserPage(Model model,@AuthenticationPrincipal User user) {
         model.addAttribute("user",user);
-        model.addAttribute("roles",roleService.getRole().toString());
-        return "user/user";
+        model.addAttribute("roles",user.getRoles());
+        return "userpage";
     }
 
 }
