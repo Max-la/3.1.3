@@ -30,14 +30,14 @@ public class DbInit{
 		HashSet<Role> Userrole = new HashSet<>();
 
 		Role role = new Role("ADMIN");
-		User userAdmin = new User("admin","admin","admin");
+		User userAdmin = new User("admin1","admin","admin");
 		Adminrole.add(new Role(1L,"ADMIN"));
 		userAdmin.setRoles(Adminrole);
 		roleService.add(role);
 		userService.add(userAdmin);
 
 		Role role1 = new Role("USER");
-		User user = new User("user","user","user");
+		User user = new User("user1","user","user");
 		Userrole.add(new Role(2L,"USER"));
 		user.setRoles(Userrole);
 		roleService.add(role1);
