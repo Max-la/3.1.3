@@ -32,42 +32,4 @@ public class AdminController {
 		model.addAttribute("user",user);
 		return "admin";
 	}
-
-//	@PostMapping(value = "/admin/add-user")
-//	public String create(@ModelAttribute("user") User user, @RequestParam(value = "checkBoxRoles") String[] checkBoxRoles){
-//		Set<Role> roles = new HashSet<>();
-//		for (String role : checkBoxRoles){
-//			roles.add(roleService.getRoleByName(role));
-//		}
-//		user.setRoles(roles);
-//		userService.add(user);
-//		return "redirect:/admin";
-//	}
-//
-//	@GetMapping(value = "/admin/edit/{id}")
-//	public String updateUserForm(@PathVariable("id") Long id,Model model){
-//		User user = userService.getUser(id);
-//		model.addAttribute("user",user);
-//		model.addAttribute("roles",roleService.getRole());
-//		return "/admin";
-//	}
-//
-//	@PutMapping(value = "/admin/edit/{id}")
-//	public String updateUser(@ModelAttribute User user,
-//	                         @RequestParam(value = "checkBoxRoles") String[] checkBoxRoles){
-//		Set<Role> roles1 = new HashSet<>();
-//		for(String role : checkBoxRoles){
-//			roles1.add(roleService.getRoleByName(role));
-//			roles1.add(roleService.getRoleByName(role));
-//		}
-//		user.setRoles(roles1);
-//		userService.updateUser(user);
-//		return "redirect:/admin";
-//	}
-//
-//	@DeleteMapping(value = "/admin/{id}")
-//	public String deleteUser(@PathVariable(value = "id") Long id){
-//		userService.delete(id);
-//		return "redirect:/admin";
-//	}
 }
